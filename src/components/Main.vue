@@ -30,6 +30,6 @@
     #subtitle {
         text-align: center;
         padding: 10px;
-        background-color: rgb(187, 207, 145);
+        background-color: rgb(197, 236, 111);
     }
 </style>
