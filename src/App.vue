@@ -6,6 +6,7 @@
 
 <script>
     import Main from './components/Main.vue'
+    //import './plugins/vuetify.js';
 
     export default {
         name: 'app',

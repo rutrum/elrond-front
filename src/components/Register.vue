@@ -1,13 +1,13 @@
 <template>
-    <div id="login">
+    <div id="register">
         <h2 id="subtitle">{{ title }}</h2>
         <form class="login-form">
-            <label>Username:</label>
+            <label>Email:</label>
             <input type="text" v-model="input.username">
             <br>
             <label>Password:</label>
             <input type="password" v-model="input.password">
-            <button class="submit" type="button" v-on:click="login()">Login</button>
+            <button class="submit" type="button" v-on:click="login()">Create Account</button>
             <p class="warning">{{ output }}</p>
         </form>
     </div>
@@ -15,10 +15,10 @@
 
 <script>
     export default {
-        name: 'login',
+        name: 'register',
         data() {
             return {
-                title: "Login",
+                title: "Register",
                 input: {
                     username: "",
                     password: ""
