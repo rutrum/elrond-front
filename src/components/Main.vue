@@ -1,15 +1,17 @@
 <template>
     <div id="elrond">
-        <h1 id="title">{{ title }}</h1>
-        <div id="loginpage">
-            <Login></Login>
-            <Register></Register>
+        <div id="pagecontent">
+            <h1 id="title">{{ title }}</h1>
+            <div id="loginpage">
+                <Login></Login>
+                <Register></Register>
+            </div>
+            <Overview></Overview>
+            <CreateAccount></CreateAccount>
+            <Preferences></Preferences>
+            <BankAccount></BankAccount>
+            <Transactions></Transactions>
         </div>
-        <Overview></Overview>
-        <CreateAccount></CreateAccount>
-        <Preferences></Preferences>
-        <BankAccount></BankAccount>
-        <Transactions></Transactions>
     </div>
 </template>
 
@@ -43,6 +45,14 @@
 </script>
 
 <style>
+    body {
+        background: linear-gradient(to right, white, darkgrey, darkgrey, darkgrey, white);
+    }
+    #pagecontent {
+        background-color: white;
+        width: 60%;
+        margin: 0 auto;
+    }
     #loginpage {
         display: flex;
         justify-content: center;
@@ -84,11 +94,18 @@
         width: 60%;
         border: solid black 1px;
         padding: 10px;
+        background-color: #F8F9F9;
     }
     .small-form {
         margin: 70px auto;
         width: 30%;
         border: solid black 1px;
         padding: 10px;
+        background-color: #F8F9F9;
+    }
+    @media only screen and (max-width: 1200px) {
+        #pagecontent {
+            width: 100%;
+        }
     }
 </style>

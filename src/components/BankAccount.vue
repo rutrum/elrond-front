@@ -22,7 +22,7 @@
 
 <script>
     export default {
-        name: 'Bank Account',
+        name: 'BankAccount',
         data() {
             return {
                 title: "Bank Account Information",
