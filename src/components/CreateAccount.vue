@@ -1,7 +1,7 @@
 <template>
     <div id="login">
         <h2 id="subtitle">{{ title }}</h2>
-        <form class="big-form">
+        <form class="small-form">
             <h2>User Information</h2>
             <label>First:</label>
             <input type="text" v-model="input.first">

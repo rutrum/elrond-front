@@ -1,9 +1,15 @@
 <template>
-    <div id="main">
+    <div id="elrond">
         <h1 id="title">{{ title }}</h1>
-        <Login style="width: 50%; display: inline-block"></Login>
-        <Register style="width: 50%; display: inline-block"></Register>
+        <div id="loginpage">
+            <Login></Login>
+            <Register></Register>
+        </div>
+        <Overview></Overview>
         <CreateAccount></CreateAccount>
+        <Preferences></Preferences>
+        <BankAccount></BankAccount>
+        <Transactions></Transactions>
     </div>
 </template>
 
@@ -11,13 +17,21 @@
     import Login from './Login.vue'
     import Register from './Register.vue'
     import CreateAccount from './CreateAccount.vue'
+    import Preferences from './Preferences.vue'
+    import BankAccount from './BankAccount.vue'
+    import Transactions from './Transactions.vue'
+    import Overview from './Overview.vue'
     
     export default {
-        name: 'main',
+        name: 'elrond',
         components: {
             Login,
             CreateAccount,
-            Register
+            Register,
+            Preferences,
+            BankAccount,
+            Transactions,
+            Overview
         },
         data() {
             return {
@@ -29,6 +43,13 @@
 </script>
 
 <style>
+    #loginpage {
+        display: flex;
+        justify-content: center;
+    }
+    #loginpage > div{
+        width: 50%;
+    }
     #title {
         text-align: center;
         padding: 20px;
@@ -53,19 +74,19 @@
         color: red;
         text-align: center;
     }
-    .submit {
-        margin: 30px auto 5px auto;
+    button {
+        margin: 20px auto 5px auto;
         width: 70%;
         display: block;
     }
-    .login-form {
-        margin: 100px auto;
+    .big-form {
+        margin: 70px auto;
         width: 60%;
         border: solid black 1px;
         padding: 10px;
     }
-    .big-form {
-        margin: 100px auto;
+    .small-form {
+        margin: 70px auto;
         width: 30%;
         border: solid black 1px;
         padding: 10px;

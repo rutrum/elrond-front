@@ -1,7 +1,7 @@
 <template>
     <div id="register">
         <h2 id="subtitle">{{ title }}</h2>
-        <form class="login-form">
+        <form class="big-form">
             <label>Email:</label>
             <input type="text" v-model="input.username">
             <br>
