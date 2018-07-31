@@ -1,16 +1,16 @@
 <template>
     <div id="elrond">
+        <h1 id="title">{{ title }}</h1>
         <div id="pagecontent">
-            <h1 id="title">{{ title }}</h1>
-            <div id="loginpage">
-                <Login></Login>
-                <Register></Register>
+            <div v-if="page === 'loginregister'" id="loginpage">
+                <Login @changepage="page=$event"></Login>
+                <Register @changepage="page=$event"></Register>
             </div>
-            <Overview></Overview>
-            <CreateAccount></CreateAccount>
-            <Preferences></Preferences>
-            <BankAccount></BankAccount>
-            <Transactions></Transactions>
+            <Overview       v-if="page === 'overview'"      @changepage="page=$event"></Overview>
+            <CreateAccount  v-if="page === 'createaccount'" @changepage="page=$event"></CreateAccount>
+            <Preferences    v-if="page === 'preferences'"   @changepage="page=$event"></Preferences>
+            <BankAccount    v-if="page === 'bankaccount'"   @changepage="page=$event"></BankAccount>
+            <Transactions   v-if="page === 'transactions'"  @changepage="page=$event"></Transactions>
         </div>
     </div>
 </template>
@@ -23,7 +23,7 @@
     import BankAccount from './BankAccount.vue'
     import Transactions from './Transactions.vue'
     import Overview from './Overview.vue'
-    
+
     export default {
         name: 'elrond',
         components: {
@@ -38,7 +38,7 @@
         data() {
             return {
                 title: "Project Elrond",
-                showlogin: false
+                page: "loginregister"
             }
         }
     }
@@ -51,7 +51,7 @@
     #pagecontent {
         background-color: white;
         width: 60%;
-        margin: 0 auto;
+        margin: 50px auto;
     }
     #loginpage {
         display: flex;

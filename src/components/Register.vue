@@ -1,7 +1,7 @@
 <template>
     <div id="register">
         <h2 id="subtitle">{{ title }}</h2>
-        <form class="big-form">
+        <div class="big-form">
             <label>Email:</label>
             <input type="text" v-model="input.username">
             <br>
@@ -9,7 +9,7 @@
             <input type="password" v-model="input.password">
             <button class="submit" type="button" v-on:click="login()">Create Account</button>
             <p class="warning">{{ output }}</p>
-        </form>
+        </div>
     </div>
 </template>
 
@@ -31,6 +31,7 @@
                 if (this.input.username != "" && this.input.password != "") {
                     this.output = ""
                     //TODO ajax?
+                    this.$emit("changepage","createaccount")
                 } else {
                     this.output = "You need to enter a username and password.";
                 }

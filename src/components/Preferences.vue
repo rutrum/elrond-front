@@ -1,7 +1,7 @@
 <template>
     <div id="preferences">
         <h2 id="subtitle">{{ title }}</h2>
-        <form class="small-form">
+        <div class="small-form">
             <label>Round to the nearest:</label>
             <div id="roundingoptions">
                 <div>
@@ -22,7 +22,8 @@
             <input type="number" v-model="input.maximum">$
             <button type="button" v-on:click="save()">Save</button>
             <p class="warning">{{ output }}</p>
-        </form>
+            <button id="back" @click="$emit('changepage','overview')">Back to Overview</button>
+        </div>
     </div>
 </template>
 

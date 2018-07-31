@@ -7,8 +7,7 @@
             <br>
             <label>Password:</label>
             <input type="password" v-model="input.password">
-            <button class="submit" type="button" v-on:click="login()">Login</button>
-            <button type="button" v-on:click="registeraccount()">Register Account</button>
+            <button class="submit" type="button" @click="login()">Login</button>
             <p class="warning">{{ output }}</p>
         </form>
     </div>
@@ -31,13 +30,11 @@
             login() {
                 if (this.input.username != "" && this.input.password != "") {
                     this.output = ""
-                    //TODO ajax?
+                    // logic
+                    this.$emit("changepage", "overview")
                 } else {
                     this.output = "You need to enter a username and password.";
                 }
-            },
-            registeraccount() {
-
             }
         }
     }

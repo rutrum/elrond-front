@@ -1,7 +1,7 @@
 <template>
     <div id="bankaccount">
         <h2 id="subtitle">{{ title }}</h2>
-        <form class="small-form">
+        <div class="small-form">
             <div>
                 <label>Bank name:</label>
                 <input type="text" v-model="input.bankname">
@@ -16,7 +16,8 @@
             </div>
             <button type="button" v-on:click="save()">Save</button>
             <p class="warning">{{ output }}</p>
-        </form>
+            <button id="back" @click="$emit('changepage','overview')">Back to Overview</button>
+        </div>
     </div>
 </template>
 

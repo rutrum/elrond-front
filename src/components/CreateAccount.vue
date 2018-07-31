@@ -94,6 +94,7 @@
                 if (allgood) {
                     this.output = ""
                     //TODO ajax?
+                    this.$emit("changepage","overview")
                 } else {
                     this.output = "Please fill in all fields."
                 }

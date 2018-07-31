@@ -17,6 +17,7 @@
                 <span></span>
                 <span v-text="total"></span>
             </div>
+            <button id="back" @click="$emit('changepage','overview')">Back to Overview</button>
         </div>
     </div>
 </template>
