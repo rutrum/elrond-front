@@ -1,21 +1,9 @@
 <template>
     <div id="bankaccount">
         <h2 id="subtitle">{{ title }}</h2>
-        <div class="small-form">
-            <div>
-                <label>Bank name:</label>
-                <input type="text" v-model="input.bankname">
-            </div>
-            <div>
-                <label>Routing Number:</label>
-                <input type="num" v-model="input.routingnumber">
-            </div>
-            <div>
-                <label>Checking Number:</label>
-                <input type="num" v-model="input.checkingnumber">
-            </div>
-            <button type="button" v-on:click="save()">Save</button>
-            <p class="warning">{{ output }}</p>
+        <div style="width: 500px" class="small-form">
+            <!-- If this dosen't work from you, you need the plaid QuickStart demo. git clone https://github.com/plaid/quickstart.git  -->
+            <iframe style="width: 470px; height: 500px" src="http://localhost:8000"></iframe>
             <button id="back" @click="$emit('changepage','overview')">Back to Overview</button>
         </div>
     </div>
@@ -40,6 +28,21 @@
                 // Save options
                 this.output = "Information saved."
             }
+        },
+        beforeMount() {
+            const stripe = stripePackage("sk_test_1bYR86tBWv609YNATBbdnIog");
+
+            // Token is created using Checkout or Elements!
+            // Get the payment token ID submitted by the form:
+            //const token = request.body.stripeToken; // Using Express
+            const token = "tok_1Cu6Q3L3Fu2e0RuvCOwLT8WW";
+
+            const charge = stripe.charges.create({
+            amount: 60,
+            currency: 'usd',
+            description: 'Example charge',
+            source: token,
+            });
         }
     }
 </script>

@@ -23,6 +23,7 @@
 </template>
 
 <script>
+
     export default {
         name: 'Transactions',
         data() {
@@ -31,21 +32,21 @@
                 transactions: [
                     {
                         id: 1,
-                        payee: "Capital One",
+                        payee: "CREDIT CARD 3333 PAYMENT",
                         accountnumber: "258083",
-                        amount: 34
+                        amount: 2500
                     },
                     {
                         id: 2,
-                        payee: "Capital One",
+                        payee: "Uber 063015 SF**POOL**",
                         accountnumber: "258083",
-                        amount: 45
+                        amount: 540
                     },
                     {
                         id: 3,
-                        payee: "Capital One",
+                        payee: "ACH Electronic CreditGUSTO PAY 123456",
                         accountnumber: "258083",
-                        amount: 87
+                        amount: 585000
                     }
                 ],
                 total: 0
