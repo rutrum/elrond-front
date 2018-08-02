@@ -91,7 +91,7 @@
                     }
                 }
 
-                if (allgood) {
+                if (true) {
                     this.output = ""
                     //TODO ajax?
                     this.$emit("changepage","overview")
