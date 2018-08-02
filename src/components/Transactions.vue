@@ -46,7 +46,7 @@
                         id: 3,
                         payee: "ACH Electronic CreditGUSTO PAY 123456",
                         accountnumber: "258083",
-                        amount: 585000
+                        amount: 5800
                     }
                 ],
                 total: 0
