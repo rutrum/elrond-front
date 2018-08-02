@@ -40,7 +40,7 @@
                         id: 2,
                         payee: "Uber 063015 SF**POOL**",
                         accountnumber: "258083",
-                        amount: 540
+                        amount: 5400
                     },
                     {
                         id: 3,

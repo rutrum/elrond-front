@@ -8,6 +8,7 @@
             <label>Password:</label>
             <input type="password" v-model="input.password">
             <button class="submit" type="button" @click="login()">Login</button>
+            <button class="submit" type="button" @click="$emit('changepage','createaccount')">Create Account</button>
             <p class="warning">{{ output }}</p>
         </form>
     </div>

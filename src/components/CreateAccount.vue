@@ -2,7 +2,14 @@
     <div id="login">
         <h2 id="subtitle">{{ title }}</h2>
         <form class="small-form">
-            <h2>User Information</h2>
+            <label>Username:</label>
+            <input type="text">
+            <br>
+            <label>Password:</label>
+            <input type="password">
+            <br>
+            <br>
+            <br>
             <label>First:</label>
             <input type="text" v-model="input.first">
             <br>
@@ -27,29 +34,7 @@
             </div>
             <label>Mobile:</label>
             <input type="text" v-model="input.mobile">
-            <h2 style="margin-top: 20px">Payee Information</h2>
-            <label>Payee:</label>
-            <input type="text" v-model="input.payee">
-            <br>
-            <label>Account:</label>
-            <input type="text" v-model="input.payeeAccount">
-            <br>
-            <label>Address:</label>
-            <input type="text" v-model="input.payeeAddress">
-            <br>
-            <label>City:</label>
-            <input type="text" v-model="input.payeeCity">
-            <div>
-                <div style="float: left; width: 50%">
-                    <label>State:</label>
-                    <input type="text" v-model="input.payeeState">
-                </div>
-                <div style="float: right; width: 50%">
-                    <label>Postal:</label>
-                    <input type="text" v-model="input.payeePostal">
-                </div>
-            </div>
-            <br>
+            
             <button class="submit" type="button" v-on:click="createAccount()">Save</button>
             <p class="warning">{{ output }}</p>
         </form>

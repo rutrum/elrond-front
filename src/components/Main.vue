@@ -1,10 +1,11 @@
 <template>
+    
     <div id="elrond">
         <h1 id="title">{{ title }}</h1>
         <div id="pagecontent">
+            <Login v-if="page === 'loginregister'" @changepage="page=$event"></Login>
             <div v-if="page === 'loginregister'" id="loginpage">
-                <Login @changepage="page=$event"></Login>
-                <Register @changepage="page=$event"></Register>
+                <!-- <Register @changepage="page=$event"></Register> -->
             </div>
             <Overview       v-if="page === 'overview'"      @changepage="page=$event"></Overview>
             <CreateAccount  v-if="page === 'createaccount'" @changepage="page=$event"></CreateAccount>
@@ -14,7 +15,7 @@
         </div>
     </div>
 </template>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 <script>
     import Login from './Login.vue'
     import Register from './Register.vue'
