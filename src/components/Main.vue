@@ -47,6 +47,7 @@
 <style>
     body {
         background: linear-gradient(to right, white, darkgrey, darkgrey, darkgrey, white);
+        font-family: Bookman;
     }
     #pagecontent {
         background-color: white;
